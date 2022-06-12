@@ -3,6 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Acer/AndroidStudioProjects/4Pics1Word/app/src/main/res/drawable/background_answer.xml" value="0.2435" />
+        <entry key="..\:/Users/Acer/AndroidStudioProjects/4Pics1Word/app/src/main/res/drawable/background_variant.xml" value="0.2435" />
+        <entry key="..\:/Users/Acer/AndroidStudioProjects/4Pics1Word/app/src/main/res/layout/fragment_home.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Acer/AndroidStudioProjects/4Pics1Word/app/src/main/res/layout/fragment_playground.xml" value="0.4" />
         <entry key="..\:/Users/User/4Pics1Word/app/src/main/res/drawable/ic_rectangle_1.xml" value="0.295" />
         <entry key="..\:/Users/User/4Pics1Word/app/src/main/res/drawable/ic_rectangle_2.xml" value="0.295" />
         <entry key="..\:/Users/User/4Pics1Word/app/src/main/res/drawable/ic_rectangle_3.xml" value="0.295" />

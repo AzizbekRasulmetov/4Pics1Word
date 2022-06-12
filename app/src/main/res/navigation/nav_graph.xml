@@ -17,7 +17,11 @@
         android:id="@+id/playgroundFragment"
         android:name="com.example.a4pics1word.ui.screen.PlaygroundFragment"
         android:label="fragment_playground"
-        tools:layout="@layout/fragment_playground" />
+        tools:layout="@layout/fragment_playground" >
+        <argument
+            android:name="playground"
+            app:argType="string" />
+    </fragment>
     <fragment
         android:id="@+id/splashFragment"
         android:name="com.example.a4pics1word.ui.screen.SplashFragment"
