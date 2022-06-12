@@ -23,7 +23,6 @@ class PlaygroundFragment : Fragment(R.layout.fragment_playground) {
     private val viewModel: PlaygroundViewModel by viewModels()
     private val args by navArgs<PlaygroundFragmentArgs>()
     private var counter = 0
-    private var counterVar = 0
     private var answerSize = 0
     private var answer = ""
 
@@ -50,8 +49,11 @@ class PlaygroundFragment : Fragment(R.layout.fragment_playground) {
                     Log.d("TAGGING", "$answer")
                     Log.d("TAGGING", "${getAnswer()}")
 
-                    if (answer == getAnswer()) showToast("Correct")
-                    else showToast("Incorrect")
+                    if (answer == getAnswer()) {
+                        showToast("Correct")
+                        viewModel.getQuestion(1, args.playground)
+                        counter = 0
+                    } else showToast("Incorrect")
                 }
             }
         }
