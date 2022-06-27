@@ -27,4 +27,15 @@ class SharedPref(context: Context) {
         set(value) = pref.edit().putBoolean("LEVEL3", value).apply()
         get() = pref.getBoolean("LEVEL3", false)
 
+    var beginner: Int
+        set(value) = pref.edit().putInt("BEGINNER", value).apply()
+        get() = pref.getInt("BEGINNER", 0)
+
+    var medium: Int
+        set(value) = pref.edit().putInt("MEDIUM", value).apply()
+        get() = pref.getInt("MEDIUM", 0)
+
+    var expert: Int
+        set(value) = pref.edit().putInt("EXPERT", value).apply()
+        get() = pref.getInt("EXPERT", 0)
 }

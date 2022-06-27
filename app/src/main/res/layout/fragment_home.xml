@@ -13,14 +13,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        app:layout_constraintVertical_bias=".15"
         android:fontFamily="@font/poppins_semibold"
         android:text="Let's play"
         android:textColor="@color/pink"
         android:textSize="36sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias=".15" />
 
 
     <TextView
@@ -40,8 +40,9 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="24dp"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:alpha="0"
         app:layout_constraintBottom_toTopOf="@id/constraintLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/text_description">
 
@@ -90,7 +91,7 @@
                     android:layout_marginStart="16dp"
                     android:layout_marginBottom="16dp"
                     android:fontFamily="@font/poppins_medium"
-                    android:text="Newbie"
+                    android:text="Beginner"
                     android:textColor="@color/white"
                     android:textSize="26sp"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -105,10 +106,11 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/newbie_img"
         android:layout_width="0dp"
         android:layout_height="150dp"
         android:layout_marginBottom="64dp"
+        android:alpha="0"
         android:src="@drawable/image1"
         app:layout_constraintBottom_toBottomOf="@+id/constraintLayout"
         app:layout_constraintEnd_toEndOf="@+id/constraintLayout"
@@ -120,8 +122,9 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="24dp"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:alpha="0"
         app:layout_constraintBottom_toTopOf="@id/constraintLayout3"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/constraintLayout">
 
@@ -170,7 +173,7 @@
                     android:layout_marginStart="16dp"
                     android:layout_marginBottom="16dp"
                     android:fontFamily="@font/poppins_medium"
-                    android:text="Middle"
+                    android:text="Medium"
                     android:textColor="@color/white"
                     android:textSize="26sp"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -185,9 +188,11 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <ImageView
+        android:id="@+id/middle_img"
         android:layout_width="0dp"
         android:layout_height="150dp"
         android:layout_marginBottom="64dp"
+        android:alpha="0"
         android:src="@drawable/image2"
         app:layout_constraintBottom_toBottomOf="@+id/constraintLayout2"
         app:layout_constraintEnd_toEndOf="@+id/constraintLayout2"
@@ -197,9 +202,10 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout3"
         android:layout_width="0dp"
-        android:layout_marginBottom="32dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="24dp"
+        android:layout_marginBottom="32dp"
+        android:alpha="0"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -218,7 +224,7 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@drawable/rectangle_2">
+                android:background="@drawable/rectangle_3">
 
                 <ImageView
                     android:id="@+id/state_level3_img_btn"
@@ -265,9 +271,11 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <ImageView
+        android:id="@+id/expert_img"
         android:layout_width="0dp"
         android:layout_height="150dp"
         android:layout_marginBottom="64dp"
+        android:alpha="0"
         android:src="@drawable/image3"
         app:layout_constraintBottom_toBottomOf="@+id/constraintLayout3"
         app:layout_constraintEnd_toEndOf="@+id/constraintLayout3"

@@ -17,11 +17,13 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
+        android:id="@+id/title_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
         android:fontFamily="@font/poppins_medium"
         android:text="Newbie"
+
         android:textColor="@color/blue"
         android:textSize="22sp"
         app:layout_constraintBottom_toBottomOf="@id/back_btn"
@@ -43,7 +45,7 @@
             android:layout_width="150dp"
             android:layout_height="150dp"
             android:layout_margin="8dp"
-            android:src="@drawable/image8"
+            android:scaleType="centerCrop"
             app:layout_constraintBottom_toTopOf="@id/image_3"
             app:layout_constraintEnd_toStartOf="@id/image_2"
             app:layout_constraintStart_toStartOf="parent"
@@ -54,7 +56,7 @@
             android:layout_width="150dp"
             android:layout_height="150dp"
             android:layout_margin="8dp"
-            android:src="@drawable/image9"
+            android:scaleType="centerCrop"
             app:layout_constraintBottom_toTopOf="@id/image_4"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/image_1"
@@ -65,7 +67,7 @@
             android:layout_width="150dp"
             android:layout_height="150dp"
             android:layout_margin="8dp"
-            android:src="@drawable/image10"
+            android:scaleType="centerCrop"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@id/image_4"
             app:layout_constraintStart_toStartOf="parent"
@@ -76,7 +78,7 @@
             android:layout_width="150dp"
             android:layout_height="150dp"
             android:layout_margin="8dp"
-            android:src="@drawable/image11"
+            android:scaleType="centerCrop"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/image_3"
@@ -99,34 +101,34 @@
             android:id="@+id/a1"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:visibility="gone"
             android:layout_marginHorizontal="4dp"
             android:background="@drawable/background_answer"
             android:fontFamily="@font/poppins_semibold"
             android:textColor="@color/pink"
-            android:textSize="32sp" />
+            android:textSize="32sp"
+            android:visibility="gone" />
 
         <Button
             android:id="@+id/a2"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_marginHorizontal="4dp"
-            android:visibility="gone"
             android:background="@drawable/background_answer"
             android:fontFamily="@font/poppins_semibold"
             android:textColor="@color/pink"
-            android:textSize="32sp" />
+            android:textSize="32sp"
+            android:visibility="gone" />
 
         <Button
             android:id="@+id/a3"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_marginHorizontal="4dp"
-            android:visibility="gone"
             android:background="@drawable/background_answer"
             android:fontFamily="@font/poppins_semibold"
             android:textColor="@color/pink"
-            android:textSize="32sp" />
+            android:textSize="32sp"
+            android:visibility="gone" />
 
         <Button
             android:id="@+id/a4"
@@ -134,10 +136,10 @@
             android:layout_height="50dp"
             android:layout_marginHorizontal="4dp"
             android:background="@drawable/background_answer"
-            android:visibility="gone"
             android:fontFamily="@font/poppins_semibold"
             android:textColor="@color/pink"
-            android:textSize="32sp" />
+            android:textSize="32sp"
+            android:visibility="gone" />
 
         <Button
             android:id="@+id/a5"
@@ -145,21 +147,21 @@
             android:layout_height="50dp"
             android:layout_marginHorizontal="4dp"
             android:background="@drawable/background_answer"
-            android:visibility="gone"
             android:fontFamily="@font/poppins_semibold"
             android:textColor="@color/pink"
-            android:textSize="32sp" />
+            android:textSize="32sp"
+            android:visibility="gone" />
 
         <Button
             android:id="@+id/a6"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:visibility="gone"
             android:layout_marginHorizontal="4dp"
             android:background="@drawable/background_answer"
             android:fontFamily="@font/poppins_semibold"
             android:textColor="@color/pink"
-            android:textSize="32sp" />
+            android:textSize="32sp"
+            android:visibility="gone" />
     </LinearLayout>
 
     <LinearLayout
@@ -179,10 +181,10 @@
             android:layout_height="50dp"
             android:layout_marginHorizontal="4dp"
             android:background="@drawable/background_variant"
-            android:visibility="gone"
             android:fontFamily="@font/poppins_semibold"
             android:textColor="@color/blue"
-            android:textSize="32sp" />
+            android:textSize="32sp"
+            android:visibility="gone" />
 
         <Button
             android:id="@+id/v2"
@@ -190,10 +192,10 @@
             android:layout_height="50dp"
             android:layout_marginHorizontal="4dp"
             android:background="@drawable/background_variant"
-            android:visibility="gone"
             android:fontFamily="@font/poppins_semibold"
             android:textColor="@color/blue"
-            android:textSize="32sp" />
+            android:textSize="32sp"
+            android:visibility="gone" />
 
         <Button
             android:id="@+id/v3"
@@ -201,10 +203,10 @@
             android:layout_height="50dp"
             android:layout_marginHorizontal="4dp"
             android:background="@drawable/background_variant"
-            android:visibility="gone"
             android:fontFamily="@font/poppins_semibold"
             android:textColor="@color/blue"
-            android:textSize="32sp" />
+            android:textSize="32sp"
+            android:visibility="gone" />
 
         <Button
             android:id="@+id/v4"
@@ -212,10 +214,10 @@
             android:layout_height="50dp"
             android:layout_marginHorizontal="4dp"
             android:background="@drawable/background_variant"
-            android:visibility="gone"
             android:fontFamily="@font/poppins_semibold"
             android:textColor="@color/blue"
-            android:textSize="32sp" />
+            android:textSize="32sp"
+            android:visibility="gone" />
 
         <Button
             android:id="@+id/v5"
@@ -223,21 +225,21 @@
             android:layout_height="50dp"
             android:layout_marginHorizontal="4dp"
             android:background="@drawable/background_variant"
-            android:visibility="gone"
             android:fontFamily="@font/poppins_semibold"
             android:textColor="@color/blue"
-            android:textSize="32sp" />
+            android:textSize="32sp"
+            android:visibility="gone" />
 
         <Button
             android:id="@+id/v6"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_marginHorizontal="4dp"
-            android:visibility="gone"
             android:background="@drawable/background_variant"
             android:fontFamily="@font/poppins_semibold"
             android:textColor="@color/blue"
-            android:textSize="32sp" />
+            android:textSize="32sp"
+            android:visibility="gone" />
     </LinearLayout>
 
     <LinearLayout
@@ -255,11 +257,11 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_marginHorizontal="4dp"
-            android:visibility="gone"
             android:background="@drawable/background_variant"
             android:fontFamily="@font/poppins_semibold"
             android:textColor="@color/blue"
-            android:textSize="32sp" />
+            android:textSize="32sp"
+            android:visibility="gone" />
 
         <Button
             android:id="@+id/v8"
@@ -267,10 +269,10 @@
             android:layout_height="50dp"
             android:layout_marginHorizontal="4dp"
             android:background="@drawable/background_variant"
-            android:visibility="gone"
             android:fontFamily="@font/poppins_semibold"
             android:textColor="@color/pink"
-            android:textSize="32sp" />
+            android:textSize="32sp"
+            android:visibility="gone" />
 
         <Button
             android:id="@+id/v9"
@@ -278,10 +280,10 @@
             android:layout_height="50dp"
             android:layout_marginHorizontal="4dp"
             android:background="@drawable/background_variant"
-            android:visibility="gone"
             android:fontFamily="@font/poppins_semibold"
             android:textColor="@color/blue"
-            android:textSize="32sp" />
+            android:textSize="32sp"
+            android:visibility="gone" />
 
         <Button
             android:id="@+id/v10"
@@ -289,10 +291,10 @@
             android:layout_height="50dp"
             android:layout_marginHorizontal="4dp"
             android:background="@drawable/background_variant"
-            android:visibility="gone"
             android:fontFamily="@font/poppins_semibold"
             android:textColor="@color/blue"
-            android:textSize="32sp" />
+            android:textSize="32sp"
+            android:visibility="gone" />
 
         <Button
             android:id="@+id/v11"
@@ -300,10 +302,10 @@
             android:layout_height="50dp"
             android:layout_marginHorizontal="4dp"
             android:background="@drawable/background_variant"
-            android:visibility="gone"
             android:fontFamily="@font/poppins_semibold"
             android:textColor="@color/blue"
-            android:textSize="32sp" />
+            android:textSize="32sp"
+            android:visibility="gone" />
 
         <Button
             android:id="@+id/v12"
@@ -311,11 +313,52 @@
             android:layout_height="50dp"
             android:layout_marginHorizontal="4dp"
             android:background="@drawable/background_variant"
-            android:visibility="gone"
             android:fontFamily="@font/poppins_semibold"
             android:textColor="@color/blue"
-            android:textSize="32sp" />
+            android:textSize="32sp"
+            android:visibility="gone" />
     </LinearLayout>
+
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/level_up_lottie"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#4D000000"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="false"
+        app:lottie_rawRes="@raw/level_up_confetti_animation" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/correct_lottie"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lottie_autoPlay="false"
+        app:lottie_loop="false"
+        app:lottie_rawRes="@raw/confetti_pop" />
+
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/in_correct_lottie"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent=".4"
+        app:lottie_autoPlay="false"
+        app:lottie_loop="false"
+        app:lottie_rawRes="@raw/orange_alert" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
