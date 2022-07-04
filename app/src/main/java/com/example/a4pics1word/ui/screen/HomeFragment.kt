@@ -1,10 +1,8 @@
 package com.example.a4pics1word.ui.screen
 
-import android.animation.ValueAnimator
 import android.os.Bundle
 import android.util.Log
 import android.view.View
-import androidx.core.graphics.alpha
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
@@ -16,7 +14,6 @@ import com.example.a4pics1word.databinding.FragmentHomeBinding
 import com.example.a4pics1word.ui.viewmodel.HomeViewModel
 import com.example.a4pics1word.util.showSnackBar
 import kotlinx.coroutines.delay
-import java.lang.Exception
 
 class HomeFragment : Fragment(R.layout.fragment_home) {
 
@@ -94,7 +91,7 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
             } else {
                 binding.stateLevel2ImgBtn.setBackgroundResource(R.drawable.ic_lock)
                 binding.constraintLayout2.setOnClickListener {
-                    showSnackBar("Medium level is currently locked")
+                    showSnackBar("Ushbu bosqich hozircha yopiq!")
                 }
 
             }
@@ -111,7 +108,7 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
             } else {
                 binding.stateLevel3ImgBtn.setBackgroundResource(R.drawable.ic_lock)
                 binding.constraintLayout3.setOnClickListener {
-                    showSnackBar("Expert level is currently locked")
+                    showSnackBar("Ushbu bosqich hozircha yopiq!")
                 }
 
             }

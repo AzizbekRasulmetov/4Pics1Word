@@ -11,7 +11,7 @@
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/level_up_lottie"
         android:layout_width="0dp"
-        android:layout_height="300dp"
+        android:layout_height="200dp"
         android:layout_marginTop="16dp"
         android:visibility="visible"
         app:layout_constraintBottom_toTopOf="@+id/text_title"
@@ -21,8 +21,9 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_chainStyle="packed"
         app:lottie_autoPlay="true"
-        app:lottie_loop="false"
-        app:lottie_rawRes="@raw/level_up_confetti_animation" />
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/level_up_confetti_animation"
+        app:lottie_speed=".5" />
 
     <TextView
         android:id="@+id/text_title"
@@ -30,7 +31,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:fontFamily="@font/poppins_bold"
-
+        android:gravity="center"
         android:text="Tabriklaymiz"
         android:textAllCaps="false"
         android:textColor="@color/white"

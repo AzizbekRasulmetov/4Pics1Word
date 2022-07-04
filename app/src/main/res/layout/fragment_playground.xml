@@ -270,7 +270,7 @@
             android:layout_marginHorizontal="4dp"
             android:background="@drawable/background_variant"
             android:fontFamily="@font/poppins_semibold"
-            android:textColor="@color/pink"
+            android:textColor="@color/blue"
             android:textSize="32sp"
             android:visibility="gone" />
 

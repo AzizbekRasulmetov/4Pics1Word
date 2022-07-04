@@ -3,7 +3,6 @@ package com.example.a4pics1word.ui.screen
 import android.animation.ValueAnimator
 import android.app.Dialog
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import android.view.View.GONE
 import android.view.View.VISIBLE
@@ -38,7 +37,6 @@ class PlaygroundFragment : Fragment(R.layout.fragment_playground) {
     private var questionsSize = 0
     private var answer = ""
 
-    val TAG = "TAGDF"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -63,11 +61,9 @@ class PlaygroundFragment : Fragment(R.layout.fragment_playground) {
         viewModel.getQuestion(args.playground)
 
         variantButtons().forEach {
-
             it.setOnClickListener { button ->
                 viewModel.variantClick(button as Button)
             }
-
         }
 
         binding.answerContainer.children.forEach {
@@ -76,7 +72,11 @@ class PlaygroundFragment : Fragment(R.layout.fragment_playground) {
             }
         }
 
-        binding.titleTv.text = args.playground
+        when (args.playground) {
+            "Beginner" -> binding.titleTv.text = "Oson"
+            "Medium" -> binding.titleTv.text = "O'rta"
+            "Expert" -> binding.titleTv.text = "Qiyin"
+        }
 
         binding.backBtn.setOnClickListener {
             viewModel.back()
@@ -123,9 +123,7 @@ class PlaygroundFragment : Fragment(R.layout.fragment_playground) {
 
             showToast("Ushbu bosqichini tamomladingiz")
             showDialog()
-//            binding.levelUpLottie.visibility = VISIBLE
-//            delay(3000L)
-//            binding.levelUpLottie.visibility = GONE
+
         }
 
     }
@@ -139,7 +137,7 @@ class PlaygroundFragment : Fragment(R.layout.fragment_playground) {
     private val inCorrectObserver = Observer<Unit> {
         lifecycleScope.launchWhenCreated {
 
-            showSnackBar("Incorrect")
+            showSnackBar("Xato javob")
             binding.inCorrectLottie.apply {
                 visibility = VISIBLE
                 playAnimation()
@@ -150,22 +148,18 @@ class PlaygroundFragment : Fragment(R.layout.fragment_playground) {
     }
     private val variantClickObserver = Observer<Button> {
 
-
-        if (it.text.isNotEmpty()) {
+        if (it.text.isNotEmpty() && answer.length > getAnswer().length) {
             getFirstEmptyAnswerButton().text = it.text
             it.text = ""
             counter++
         }
 
         if (counter == answerSize) {
-            Log.d(TAG, "if 2.1")
-            Log.d(TAG, answer)
-            Log.d(TAG, getAnswer())
+
             if (answer == getAnswer()) {
                 viewModel.correctAnswer(args.playground)
                 // there should be list size
                 if (counterQuestion == questionsSize) {
-                    Log.d(TAG, "if 2.3")
                     viewModel.finishLevel(args.playground)
                 } else {
 
@@ -282,7 +276,6 @@ class PlaygroundFragment : Fragment(R.layout.fragment_playground) {
             addUpdateListener {
                 imageView.rotationX = it.animatedValue as Float
                 imageView.rotationY = it.animatedValue as Float
-                imageView.rotation = it.animatedValue as Float
             }
             duration = 1000L
             start()
@@ -293,7 +286,6 @@ class PlaygroundFragment : Fragment(R.layout.fragment_playground) {
             addUpdateListener {
                 imageView.rotationX = it.animatedValue as Float
                 imageView.rotationY = it.animatedValue as Float
-                imageView.rotation = it.animatedValue as Float
             }
             duration = 1000L
             start()
@@ -313,7 +305,6 @@ class PlaygroundFragment : Fragment(R.layout.fragment_playground) {
             dialog.dismiss()
             requireActivity().onBackPressed()
         }
-
         dialog.show()
     }
 }
