@@ -52,6 +52,7 @@ class PlaygroundFragment : Fragment(R.layout.fragment_playground) {
         }
         viewModel.prefLiveData.observe(this) {
             counterQuestion = it
+
         }
     }
 
@@ -131,6 +132,7 @@ class PlaygroundFragment : Fragment(R.layout.fragment_playground) {
     private val correctObserver = Observer<Unit> {
         lifecycleScope.launchWhenCreated {
             binding.correctLottie.playAnimation()
+            binding.counterTv.text = counterQuestion.toString()
         }
     }
 

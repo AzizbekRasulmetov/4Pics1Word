@@ -311,7 +311,7 @@ class QuestionRepository {
         )
         arrayList.add(
             QuestionData(
-                "TINCHLIK",
+                "TINCH",
                 "ICTKANILAUHB",
                 R.raw.peace1,
                 R.raw.peace2,
