@@ -17,6 +17,7 @@ class PlaygroundViewModel : ViewModel() {
     private val pref = SharedPref.getInstance()
 
     val questionLiveData = MutableLiveData<QuestionData>()
+    val counterLiveData = MutableLiveData<Int>()
     val backLiveData = MutableLiveData<Unit>()
     val correctAnswerLiveData = MutableLiveData<Unit>()
     val inCorrectAnswerLiveData = MutableLiveData<Unit>()
@@ -41,6 +42,7 @@ class PlaygroundViewModel : ViewModel() {
                 prefLiveData.value = pref.beginner
                 val question = repository.loadNewbieQuestions()[indx]
                 questionLiveData.postValue(question)
+                counterLiveData.postValue(indx)
             }
             "Medium" -> {
                 listSizeLiveData.value = repository.loadMediumQuestions().size
@@ -48,6 +50,8 @@ class PlaygroundViewModel : ViewModel() {
                 prefLiveData.value = pref.medium
                 val question = repository.loadMediumQuestions()[indx]
                 questionLiveData.value = question
+                counterLiveData.postValue(indx)
+
             }
             "Expert" -> {
                 listSizeLiveData.value = repository.loadExpertQuestions().size
@@ -55,6 +59,8 @@ class PlaygroundViewModel : ViewModel() {
                 prefLiveData.value = pref.expert
                 val question = repository.loadExpertQuestions()[indx]
                 questionLiveData.postValue(question)
+                counterLiveData.postValue(indx)
+
 
             }
         }

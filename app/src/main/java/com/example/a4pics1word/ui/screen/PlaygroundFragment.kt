@@ -21,6 +21,7 @@ import by.kirich1409.viewbindingdelegate.viewBinding
 import com.example.a4pics1word.R
 import com.example.a4pics1word.databinding.FragmentPlaygroundBinding
 import com.example.a4pics1word.model.QuestionData
+import com.example.a4pics1word.repository.SharedPref
 import com.example.a4pics1word.ui.viewmodel.PlaygroundViewModel
 import com.example.a4pics1word.util.showSnackBar
 import com.example.a4pics1word.util.showToast
@@ -52,7 +53,9 @@ class PlaygroundFragment : Fragment(R.layout.fragment_playground) {
         }
         viewModel.prefLiveData.observe(this) {
             counterQuestion = it
-
+        }
+        viewModel.counterLiveData.observe(this) {
+            binding.counterTv.text = (it + 1).toString()
         }
     }
 
@@ -82,6 +85,7 @@ class PlaygroundFragment : Fragment(R.layout.fragment_playground) {
         binding.backBtn.setOnClickListener {
             viewModel.back()
         }
+
     }
 
 
@@ -132,7 +136,6 @@ class PlaygroundFragment : Fragment(R.layout.fragment_playground) {
     private val correctObserver = Observer<Unit> {
         lifecycleScope.launchWhenCreated {
             binding.correctLottie.playAnimation()
-            binding.counterTv.text = counterQuestion.toString()
         }
     }
 

@@ -322,7 +322,7 @@ class QuestionRepository {
         arrayList.add(
             QuestionData(
                 "BENZIN",
-                "NIAIYZBGEQ'A",
+                "NIAINZBGEQ'A",
                 R.raw.banzin1,
                 R.raw.banzin2,
                 R.raw.benzin3,
