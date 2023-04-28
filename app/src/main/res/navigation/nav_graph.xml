@@ -6,25 +6,20 @@
     app:startDestination="@id/homeFragment">
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.example.a4pics1word.ui.screen.HomeFragment"
+        android:name="uz.ravshanbaxranov.a4pics1word.ui.screen.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" >
+        tools:layout="@layout/fragment_home">
         <action
             android:id="@+id/action_homeFragment_to_playgroundFragment"
             app:destination="@id/playgroundFragment" />
     </fragment>
     <fragment
         android:id="@+id/playgroundFragment"
-        android:name="com.example.a4pics1word.ui.screen.PlaygroundFragment"
+        android:name="uz.ravshanbaxranov.a4pics1word.ui.screen.PlaygroundFragment"
         android:label="fragment_playground"
-        tools:layout="@layout/fragment_playground" >
+        tools:layout="@layout/fragment_playground">
         <argument
             android:name="playground"
             app:argType="string" />
     </fragment>
-    <fragment
-        android:id="@+id/splashFragment"
-        android:name="com.example.a4pics1word.ui.screen.SplashFragment"
-        android:label="fragment_splash"
-        tools:layout="@layout/fragment_splash" />
 </navigation>

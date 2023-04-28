@@ -4,15 +4,15 @@
     "type": "APK",
     "kind": "Directory"
   },
-  "applicationId": "com.example.a4pics1word",
+  "applicationId": "uz.ravshanbaxranov.a4pics1word",
   "variantName": "release",
   "elements": [
     {
       "type": "SINGLE",
       "filters": [],
       "attributes": [],
-      "versionCode": 1,
-      "versionName": "1.0",
+      "versionCode": 3,
+      "versionName": "1.2",
       "outputFile": "app-release.apk"
     }
   ],
